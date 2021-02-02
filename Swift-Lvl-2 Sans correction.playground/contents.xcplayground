@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<playground version='6.0' target-platform='ios' display-mode='rendered'>
+    <pages>
+        <page name='Intro'/>
+        <page name='V&amp;C'/>
+        <page name='Conversion'/>
+        <page name='Controle'/>
+        <page name='Tableau'/>
+        <page name='Dico'/>
+        <page name='String'/>
+        <page name='Fonctions'/>
+        <page name='Classes'/>
+        <page name='Référence VS copie'/>
+        <page name='Optional A remplir'/>
+        <page name='Closures A remplir'/>
+        <page name='Switch-DETAILs'/>
+        <page name='Enum-DETAILs'/>
+        <page name='Les extensions'/>
+        <page name='Protocols-1'/>
+        <page name='Protocols-2'/>
+        <page name='Polymorphisme-1'/>
+        <page name='Generics-1'/>
+        <page name='Polymorphisme-2'/>
+        <page name='Exercice'/>
+        <page name='Experimentation'/>
+    </pages>
+</playground>
