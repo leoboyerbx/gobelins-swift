@@ -43,7 +43,7 @@ airports["LHR"] = "London"
 var previousValue = airports.updateValue("Dublin International", forKey: "DUB")
 
 //: entrée supprimée
-airports["APL"] = nil
+//airports["APL"] = nil
 
 //: plus parlant que le nil :  à privilégier
 var removedValue = airports.removeValue(forKey: "APL")

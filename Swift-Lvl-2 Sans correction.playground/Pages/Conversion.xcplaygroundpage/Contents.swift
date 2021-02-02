@@ -22,4 +22,8 @@ let someValue = 3 + 0.14159
 
 //: **EXO: Essayer d'additionner un Int et un Double (stockés dans des conteneurs)**
 // ICI
+let myInt: Int = 56
+let myDouble = 78.17
+
+let result = Double(myInt) + myDouble
 //: [Next](@next)

@@ -126,10 +126,9 @@ let immutableArray = ["a", "b"]
 //: __TIP:On peut changer les éléments contenus dans un tableau mais pas le tableau__
 //:
 //:
-// immutableArray[0] = "b"
-//
-// immutableArray += "c"
 
+//immutableArray.append("c")
+//immutableArray
 //: Les tableaux peuvent être copiés
 
 //: voici trois copies d'un tableau
@@ -141,7 +140,7 @@ var c = a
 a[0] = 42
 b[0]
 c[0]
-
+ 
 a
 b
 c
