@@ -43,7 +43,7 @@ somefunc(a: originalString)
 originalString // not modified
 
 for character in originalString.characters
-{
+{ 
     character
 }
 
