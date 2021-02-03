@@ -96,9 +96,12 @@ class ViewController: UIViewController {
                 }
                 currentOperation = operation
                 resetScreen()
+            } else {
+                if operation == Operation.minus {
+                    calculatorScreen.text = "-"
+                }
             }
         }
-        resetScreen()
     }
     
     func resetScreen () {
