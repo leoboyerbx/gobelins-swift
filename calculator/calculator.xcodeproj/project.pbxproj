@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		EDAA456B25CAA9ED00964268 /* CalcBrain.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDAA456A25CAA9ED00964268 /* CalcBrain.swift */; };
 		EDFB72FD25C9A2FF004CAF7C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB72FC25C9A2FF004CAF7C /* AppDelegate.swift */; };
 		EDFB72FF25C9A2FF004CAF7C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB72FE25C9A2FF004CAF7C /* SceneDelegate.swift */; };
 		EDFB730125C9A2FF004CAF7C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDFB730025C9A2FF004CAF7C /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EDAA456A25CAA9ED00964268 /* CalcBrain.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalcBrain.swift; sourceTree = "<group>"; };
 		EDFB72F925C9A2FF004CAF7C /* calculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = calculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		EDFB72FC25C9A2FF004CAF7C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		EDFB72FE25C9A2FF004CAF7C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -63,6 +65,7 @@
 				EDFB730525C9A303004CAF7C /* Assets.xcassets */,
 				EDFB730725C9A303004CAF7C /* LaunchScreen.storyboard */,
 				EDFB730A25C9A303004CAF7C /* Info.plist */,
+				EDAA456A25CAA9ED00964268 /* CalcBrain.swift */,
 			);
 			path = calculator;
 			sourceTree = "<group>";
@@ -138,6 +141,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				EDFB730125C9A2FF004CAF7C /* ViewController.swift in Sources */,
+				EDAA456B25CAA9ED00964268 /* CalcBrain.swift in Sources */,
 				EDFB72FD25C9A2FF004CAF7C /* AppDelegate.swift in Sources */,
 				EDFB72FF25C9A2FF004CAF7C /* SceneDelegate.swift in Sources */,
 			);
