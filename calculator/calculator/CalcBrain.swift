@@ -16,6 +16,9 @@ class CalcBrain {
     var memoryValue: Double?
     var currentValue: String = "0"
 
+    init () {
+        reset()
+    }
     
     /// Resets calc to its initial values
     func reset () {

@@ -27,13 +27,13 @@ class ViewController: UIViewController {
         var operation: CalcBrain.Operation
         switch sender.tag {
             case 0:
-                operation = CalcBrain.Operation.plus
+                operation = .plus
             case 1:
-                operation = CalcBrain.Operation.minus
+                operation = .minus
             case 2:
-                operation = CalcBrain.Operation.multiply
+                operation = .multiply
             case 3:
-                operation = CalcBrain.Operation.divide
+                operation = .divide
             default:
                 return
         }
