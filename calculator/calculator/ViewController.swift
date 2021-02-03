@@ -10,54 +10,49 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var calculatorScreen: UILabel!
+    @IBOutlet weak var memoryScreen: UILabel!
     
-    @IBAction func keyPress1(_ sender: UIButton) {
-        appendNumber(number: "1")
+    @IBAction func keyPressNumber(_ sender: UIButton) {
+        appendNumber(number: String(sender.tag))
     }
-    @IBAction func keyPress2(_ sender: UIButton) {
-        appendNumber(number: "2")
-    }
-    @IBAction func keyPress3(_ sender: UIButton) {
-        appendNumber(number: "3")
-    }
-    @IBAction func keyPress4(_ sender: UIButton) {
-        appendNumber(number: "4")
-    }
-    @IBAction func keyPress5(_ sender: UIButton) {
-        appendNumber(number: "5")
-    }
-    @IBAction func keyPress6(_ sender: UIButton) {
-        appendNumber(number: "6")
-    }
-    @IBAction func keyPress7(_ sender: UIButton) {
-        appendNumber(number: "7")
-    }
-    @IBAction func keyPress8(_ sender: UIButton) {
-        appendNumber(number: "8")
-    }
-    @IBAction func keyPress9(_ sender: UIButton) {
-        appendNumber(number: "9")
-    }
-    @IBAction func keyPress0(_ sender: UIButton) {
-        appendNumber(number: "0")
-    }
+    
     @IBAction func keyPressDot(_ sender: UIButton) {
-        appendNumber(number: ".")
+        appendDot()
     }
     
-    @IBAction func keyPressPlus(_ sender: UIButton) {
-    }
-    @IBAction func keyPressMinus(_ sender: UIButton) {
-    }
-    @IBAction func keyPressMultiply(_ sender: UIButton) {
-    }
-    @IBAction func keyPressDivide(_ sender: UIButton) {
-    }
-    @IBAction func keyPressEqual(_ sender: UIButton) {
+    @IBAction func keyPressOperand(_ sender: UIButton) {
+        var operation: Operation
+        switch sender.tag {
+            case 0:
+                operation = Operation.plus
+            case 1:
+                operation = Operation.minus
+            case 2:
+                operation = Operation.multiply
+            case 3:
+                operation = Operation.divide
+            default:
+                return
+        }
+        pressOperation(operation: operation)
     }
     
-    enum Operation:Int {
-        case plus = 0, minus = 1, multiply = 2, divide = 3
+    @IBAction func keyPressAction(_ sender: UIButton) {
+        switch sender.tag {
+        case 0:
+            resetAll()
+        case 1:
+            correct()
+        case 2:
+            showResult()
+        default:
+            return
+        }
+    }
+    
+    
+    enum Operation:String {
+        case plus = "+", minus = "-", multiply = "x", divide = "÷"
     }
     
     var currentOperation: Operation? = nil
@@ -76,10 +71,32 @@ class ViewController: UIViewController {
         }
     }
     
+    func appendDot() {
+        if calculatorScreen.text == "0" {
+            calculatorScreen.text = "."
+        } else {
+            if let text = calculatorScreen.text {
+                if !text.contains(".") {
+                    calculatorScreen.text! += "."
+                }
+            }
+        }
+    }
+    
     func pressOperation(operation: Operation) {
-        currentOperation = operation
         if let value = calculatorScreen.text {
-            memoryValue = Double(value)
+            if value != "0" {
+                if let intermediateResult = getResult() {
+                    memoryValue = intermediateResult
+                    memoryScreen.text = formatResult(result: intermediateResult)
+ + operation.rawValue
+                } else {
+                    memoryValue = Double(value)
+                    memoryScreen.text = value + operation.rawValue
+                }
+                currentOperation = operation
+                resetScreen()
+            }
         }
         resetScreen()
     }
@@ -87,7 +104,57 @@ class ViewController: UIViewController {
     func resetScreen () {
         calculatorScreen.text = "0"
     }
-
-
+    
+    func showResult () {
+        if let result = getResult() {
+            resetAll()
+            calculatorScreen.text = formatResult(result: result)
+        }
+    }
+    
+    func formatResult (result: Double) -> String {
+        if floor(result) == result {
+            return "\(Int(result))"
+        } else {
+            return "\(result)"
+        }
+    }
+    
+    func getResult () -> Double? {
+        if let operation = currentOperation,
+           let member1 = memoryValue,
+           let member2Text = calculatorScreen.text,
+           let member2:Double = Double(member2Text)
+        {
+            switch operation {
+            case Operation.plus:
+                return member1 + member2
+            case .minus:
+                return member1 - member2
+            case .multiply:
+                return member1 * member2
+            case .divide:
+                return member1 / member2
+            }
+        }
+        return nil
+    }
+    
+    func resetAll() {
+        resetScreen()
+        memoryScreen.text = ""
+        currentOperation = nil
+        memoryValue = nil
+    }
+    
+    func correct () {
+        if let text = calculatorScreen.text {
+            if text.count > 1 {
+                calculatorScreen.text = String(text.dropLast())
+            } else {
+                calculatorScreen.text = "0"
+            }
+        }
+    }
 }
 
