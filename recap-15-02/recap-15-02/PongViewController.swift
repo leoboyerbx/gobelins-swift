@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class PongViewController: UIViewController {
     let pad = UIView(frame: CGRect(x: 10, y: 700, width: 100, height: 10))
     let ball = UIView(frame: CGRect(x: 50, y: 50, width: 40, height: 40))
     var directionX: Float = 5.0
