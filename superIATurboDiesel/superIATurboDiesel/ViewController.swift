@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         switch lowercased {
         case "voir vincent", "voir vince":
             self.performSegue(withIdentifier: "toVincent", sender: nil)
-        case "voir jojo", "voir johann":
+        case "voir jojo", "voir johann", "voir un saltimbanque":
             self.performSegue(withIdentifier: "toJojo", sender: nil)
         case "voir ma calculatrice":
             self.performSegue(withIdentifier: "toCalc", sender: nil)
