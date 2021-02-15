@@ -29,7 +29,6 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
                 cell.textLabel?.text = "toto"
             } else {
                 cell.textLabel?.text = "titi"
-               
             }
             return cell
         } else {

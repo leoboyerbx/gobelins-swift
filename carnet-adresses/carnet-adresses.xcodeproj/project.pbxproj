@@ -7,29 +7,33 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		ED2172EF25DA5F47003879BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2172EE25DA5F47003879BF /* AppDelegate.swift */; };
-		ED2172F125DA5F47003879BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2172F025DA5F47003879BF /* SceneDelegate.swift */; };
-		ED2172F325DA5F47003879BF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED2172F225DA5F47003879BF /* ViewController.swift */; };
-		ED2172F625DA5F47003879BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2172F425DA5F47003879BF /* Main.storyboard */; };
-		ED2172F825DA5F4B003879BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED2172F725DA5F4B003879BF /* Assets.xcassets */; };
-		ED2172FB25DA5F4B003879BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED2172F925DA5F4B003879BF /* LaunchScreen.storyboard */; };
-		ED884A6A25DA701D008CD116 /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED884A6925DA701D008CD116 /* ContactTableViewCell.swift */; };
+		ED21731025DA6B06003879BF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21730F25DA6B06003879BF /* AppDelegate.swift */; };
+		ED21731225DA6B06003879BF /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21731125DA6B06003879BF /* SceneDelegate.swift */; };
+		ED21731425DA6B06003879BF /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED21731325DA6B06003879BF /* ContactsViewController.swift */; };
+		ED21731725DA6B06003879BF /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED21731525DA6B06003879BF /* Main.storyboard */; };
+		ED21731925DA6B08003879BF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ED21731825DA6B08003879BF /* Assets.xcassets */; };
+		ED21731C25DA6B08003879BF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ED21731A25DA6B08003879BF /* LaunchScreen.storyboard */; };
+		ED289E6925DA728500B9E3DB /* ContactTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E6825DA728500B9E3DB /* ContactTableViewCell.swift */; };
+		ED884A6625DA6C8B008CD116 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED884A6525DA6C8B008CD116 /* InputViewController.swift */; };
+		EDF46EA825DA805D0090F713 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDF46EA725DA805D0090F713 /* DataManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		ED2172EB25DA5F47003879BF /* TableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		ED2172EE25DA5F47003879BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		ED2172F025DA5F47003879BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		ED2172F225DA5F47003879BF /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		ED2172F525DA5F47003879BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		ED2172F725DA5F4B003879BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		ED2172FA25DA5F4B003879BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		ED2172FC25DA5F4B003879BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ED884A6925DA701D008CD116 /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		ED21730C25DA6B06003879BF /* carnet-adresses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "carnet-adresses.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		ED21730F25DA6B06003879BF /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		ED21731125DA6B06003879BF /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		ED21731325DA6B06003879BF /* ContactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		ED21731625DA6B06003879BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		ED21731825DA6B08003879BF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ED21731B25DA6B08003879BF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		ED21731D25DA6B08003879BF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ED289E6825DA728500B9E3DB /* ContactTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactTableViewCell.swift; sourceTree = "<group>"; };
+		ED884A6525DA6C8B008CD116 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
+		EDF46EA725DA805D0090F713 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		ED2172E825DA5F47003879BF /* Frameworks */ = {
+		ED21730925DA6B06003879BF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -39,72 +43,74 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		ED2172E225DA5F47003879BF = {
+		ED21730325DA6B06003879BF = {
 			isa = PBXGroup;
 			children = (
-				ED2172ED25DA5F47003879BF /* TableView */,
-				ED2172EC25DA5F47003879BF /* Products */,
+				ED21730E25DA6B06003879BF /* carnet-adresses */,
+				ED21730D25DA6B06003879BF /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		ED2172EC25DA5F47003879BF /* Products */ = {
+		ED21730D25DA6B06003879BF /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				ED2172EB25DA5F47003879BF /* TableView.app */,
+				ED21730C25DA6B06003879BF /* carnet-adresses.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		ED2172ED25DA5F47003879BF /* TableView */ = {
+		ED21730E25DA6B06003879BF /* carnet-adresses */ = {
 			isa = PBXGroup;
 			children = (
-				ED2172EE25DA5F47003879BF /* AppDelegate.swift */,
-				ED2172F025DA5F47003879BF /* SceneDelegate.swift */,
-				ED2172F225DA5F47003879BF /* ViewController.swift */,
-				ED2172F425DA5F47003879BF /* Main.storyboard */,
-				ED2172F725DA5F4B003879BF /* Assets.xcassets */,
-				ED2172F925DA5F4B003879BF /* LaunchScreen.storyboard */,
-				ED2172FC25DA5F4B003879BF /* Info.plist */,
-				ED884A6925DA701D008CD116 /* ContactTableViewCell.swift */,
+				ED21730F25DA6B06003879BF /* AppDelegate.swift */,
+				ED21731125DA6B06003879BF /* SceneDelegate.swift */,
+				ED21731325DA6B06003879BF /* ContactsViewController.swift */,
+				ED21731525DA6B06003879BF /* Main.storyboard */,
+				ED289E6825DA728500B9E3DB /* ContactTableViewCell.swift */,
+				ED21731825DA6B08003879BF /* Assets.xcassets */,
+				ED21731A25DA6B08003879BF /* LaunchScreen.storyboard */,
+				ED21731D25DA6B08003879BF /* Info.plist */,
+				ED884A6525DA6C8B008CD116 /* InputViewController.swift */,
+				EDF46EA725DA805D0090F713 /* DataManager.swift */,
 			);
-			path = TableView;
+			path = "carnet-adresses";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		ED2172EA25DA5F47003879BF /* TableView */ = {
+		ED21730B25DA6B06003879BF /* carnet-adresses */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = ED2172FF25DA5F4B003879BF /* Build configuration list for PBXNativeTarget "TableView" */;
+			buildConfigurationList = ED21732025DA6B08003879BF /* Build configuration list for PBXNativeTarget "carnet-adresses" */;
 			buildPhases = (
-				ED2172E725DA5F47003879BF /* Sources */,
-				ED2172E825DA5F47003879BF /* Frameworks */,
-				ED2172E925DA5F47003879BF /* Resources */,
+				ED21730825DA6B06003879BF /* Sources */,
+				ED21730925DA6B06003879BF /* Frameworks */,
+				ED21730A25DA6B06003879BF /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = TableView;
-			productName = TableView;
-			productReference = ED2172EB25DA5F47003879BF /* TableView.app */;
+			name = "carnet-adresses";
+			productName = "carnet-adresses";
+			productReference = ED21730C25DA6B06003879BF /* carnet-adresses.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		ED2172E325DA5F47003879BF /* Project object */ = {
+		ED21730425DA6B06003879BF /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1240;
 				TargetAttributes = {
-					ED2172EA25DA5F47003879BF = {
+					ED21730B25DA6B06003879BF = {
 						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
-			buildConfigurationList = ED2172E625DA5F47003879BF /* Build configuration list for PBXProject "TableView" */;
+			buildConfigurationList = ED21730725DA6B06003879BF /* Build configuration list for PBXProject "carnet-adresses" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -112,56 +118,58 @@
 				en,
 				Base,
 			);
-			mainGroup = ED2172E225DA5F47003879BF;
-			productRefGroup = ED2172EC25DA5F47003879BF /* Products */;
+			mainGroup = ED21730325DA6B06003879BF;
+			productRefGroup = ED21730D25DA6B06003879BF /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				ED2172EA25DA5F47003879BF /* TableView */,
+				ED21730B25DA6B06003879BF /* carnet-adresses */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		ED2172E925DA5F47003879BF /* Resources */ = {
+		ED21730A25DA6B06003879BF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED2172FB25DA5F4B003879BF /* LaunchScreen.storyboard in Resources */,
-				ED2172F825DA5F4B003879BF /* Assets.xcassets in Resources */,
-				ED2172F625DA5F47003879BF /* Main.storyboard in Resources */,
+				ED21731C25DA6B08003879BF /* LaunchScreen.storyboard in Resources */,
+				ED21731925DA6B08003879BF /* Assets.xcassets in Resources */,
+				ED21731725DA6B06003879BF /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		ED2172E725DA5F47003879BF /* Sources */ = {
+		ED21730825DA6B06003879BF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ED884A6A25DA701D008CD116 /* ContactTableViewCell.swift in Sources */,
-				ED2172F325DA5F47003879BF /* ViewController.swift in Sources */,
-				ED2172EF25DA5F47003879BF /* AppDelegate.swift in Sources */,
-				ED2172F125DA5F47003879BF /* SceneDelegate.swift in Sources */,
+				ED21731425DA6B06003879BF /* ContactsViewController.swift in Sources */,
+				EDF46EA825DA805D0090F713 /* DataManager.swift in Sources */,
+				ED289E6925DA728500B9E3DB /* ContactTableViewCell.swift in Sources */,
+				ED21731025DA6B06003879BF /* AppDelegate.swift in Sources */,
+				ED21731225DA6B06003879BF /* SceneDelegate.swift in Sources */,
+				ED884A6625DA6C8B008CD116 /* InputViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		ED2172F425DA5F47003879BF /* Main.storyboard */ = {
+		ED21731525DA6B06003879BF /* Main.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED2172F525DA5F47003879BF /* Base */,
+				ED21731625DA6B06003879BF /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
-		ED2172F925DA5F4B003879BF /* LaunchScreen.storyboard */ = {
+		ED21731A25DA6B08003879BF /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				ED2172FA25DA5F4B003879BF /* Base */,
+				ED21731B25DA6B08003879BF /* Base */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";
@@ -169,7 +177,7 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
-		ED2172FD25DA5F4B003879BF /* Debug */ = {
+		ED21731E25DA6B08003879BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -230,7 +238,7 @@
 			};
 			name = Debug;
 		};
-		ED2172FE25DA5F4B003879BF /* Release */ = {
+		ED21731F25DA6B08003879BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -285,36 +293,36 @@
 			};
 			name = Release;
 		};
-		ED21730025DA5F4B003879BF /* Debug */ = {
+		ED21732125DA6B08003879BF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableView/Info.plist;
+				INFOPLIST_FILE = "carnet-adresses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pnk.TableView;
+				PRODUCT_BUNDLE_IDENTIFIER = "pnk.carnet-adresses";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		ED21730125DA5F4B003879BF /* Release */ = {
+		ED21732225DA6B08003879BF /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				INFOPLIST_FILE = TableView/Info.plist;
+				INFOPLIST_FILE = "carnet-adresses/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = pnk.TableView;
+				PRODUCT_BUNDLE_IDENTIFIER = "pnk.carnet-adresses";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -324,25 +332,25 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		ED2172E625DA5F47003879BF /* Build configuration list for PBXProject "TableView" */ = {
+		ED21730725DA6B06003879BF /* Build configuration list for PBXProject "carnet-adresses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED2172FD25DA5F4B003879BF /* Debug */,
-				ED2172FE25DA5F4B003879BF /* Release */,
+				ED21731E25DA6B08003879BF /* Debug */,
+				ED21731F25DA6B08003879BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		ED2172FF25DA5F4B003879BF /* Build configuration list for PBXNativeTarget "TableView" */ = {
+		ED21732025DA6B08003879BF /* Build configuration list for PBXNativeTarget "carnet-adresses" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				ED21730025DA5F4B003879BF /* Debug */,
-				ED21730125DA5F4B003879BF /* Release */,
+				ED21732125DA6B08003879BF /* Debug */,
+				ED21732225DA6B08003879BF /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
-	rootObject = ED2172E325DA5F47003879BF /* Project object */;
+	rootObject = ED21730425DA6B06003879BF /* Project object */;
 }
