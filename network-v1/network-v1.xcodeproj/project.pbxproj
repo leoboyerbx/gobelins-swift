@@ -16,6 +16,8 @@
 		ED7F69C325DBB7600098ED3D /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED7F69AD25DBB6CF0098ED3D /* Alamofire.framework */; };
 		ED7F69C425DBB7600098ED3D /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED7F69AD25DBB6CF0098ED3D /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		ED7F69C725DBCBAC0098ED3D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F69C625DBCBAC0098ED3D /* NetworkManager.swift */; };
+		ED7F69C925DBDC680098ED3D /* AsyncTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F69C825DBDC680098ED3D /* AsyncTask.swift */; };
+		ED7F69CB25DBDCA50098ED3D /* TaskManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7F69CA25DBDCA50098ED3D /* TaskManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,6 +97,8 @@
 		ED7F699B25DBB6730098ED3D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		ED7F69A225DBB6CF0098ED3D /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		ED7F69C625DBCBAC0098ED3D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		ED7F69C825DBDC680098ED3D /* AsyncTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AsyncTask.swift; sourceTree = "<group>"; };
+		ED7F69CA25DBDCA50098ED3D /* TaskManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaskManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +135,7 @@
 			children = (
 				ED7F698D25DBB6720098ED3D /* AppDelegate.swift */,
 				ED7F698F25DBB6720098ED3D /* SceneDelegate.swift */,
+				ED7F69C825DBDC680098ED3D /* AsyncTask.swift */,
 				ED7F699125DBB6720098ED3D /* ViewController.swift */,
 				ED7F699325DBB6720098ED3D /* Main.storyboard */,
 				ED7F699625DBB6730098ED3D /* Assets.xcassets */,
@@ -138,6 +143,7 @@
 				ED7F699B25DBB6730098ED3D /* Info.plist */,
 				ED7F69A225DBB6CF0098ED3D /* Alamofire.xcodeproj */,
 				ED7F69C625DBCBAC0098ED3D /* NetworkManager.swift */,
+				ED7F69CA25DBDCA50098ED3D /* TaskManager.swift */,
 			);
 			path = "network-v1";
 			sourceTree = "<group>";
@@ -292,8 +298,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED7F69CB25DBDCA50098ED3D /* TaskManager.swift in Sources */,
 				ED7F69C725DBCBAC0098ED3D /* NetworkManager.swift in Sources */,
 				ED7F699225DBB6720098ED3D /* ViewController.swift in Sources */,
+				ED7F69C925DBDC680098ED3D /* AsyncTask.swift in Sources */,
 				ED7F698E25DBB6720098ED3D /* AppDelegate.swift in Sources */,
 				ED7F699025DBB6720098ED3D /* SceneDelegate.swift in Sources */,
 			);

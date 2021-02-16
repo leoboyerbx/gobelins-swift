@@ -13,18 +13,15 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var resultTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
-        
-        // Créer une classe networkmanager singleton
-        // Fonction get prend en paramètre une string (url) et un callback envoyant une string
-        
-        // NetworkManager.instance.get(url: 'blablabla') { result in
-        //  result est le résultat de l'appel
-        // }
-        
-        // Puis une ui: champ texte avec url, puis on affiche le résultat avec un uitextview
     
         urlField.delegate = self
+        TaskManager.instance.doTask { (str) in
+            if let number = Int(str),
+               number >= 10 {
+                AsyncTask.shared.stopTask()
+            }
+            print(str)
+        }
     }
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
