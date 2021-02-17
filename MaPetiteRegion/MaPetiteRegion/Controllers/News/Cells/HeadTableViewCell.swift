@@ -24,5 +24,14 @@ class HeadTableViewCell: UITableViewCell {
 
         // Configure the view for the selected state
     }
+    
+    func setup() {
+        self.cityName.text = "Annecy"
+        self.newsNumberLabel.text = "12 news"
+        self.cityImage.image = UIImage(named: "annecy_img")
+        self.backgroundColor = UIContext.Color.Global.annecyBGColor
+        self.roundedBottom.layer.cornerRadius = 30
+        self.roundedBottom.backgroundColor = .white
+    }
 
 }

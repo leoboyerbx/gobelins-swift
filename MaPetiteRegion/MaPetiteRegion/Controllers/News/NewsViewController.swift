@@ -19,24 +19,29 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 1 + 3
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 110
+        if indexPath.row == 0 {
+            return 120
+        }
+        return 300
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "newsHead") as? HeadTableViewCell {
-            cell.cityName.text = "Annecy"
-            cell.newsNumberLabel.text = "12 news"
-            cell.cityImage.image = UIImage(named: "annecy_img")
-//            cell.backgroundColor = UIContext.Color.Global.annecyBGColor
-            cell.roundedBottom.layer.cornerRadius = 30
-            return cell
+        if indexPath.row == 0 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "newsHead") as? HeadTableViewCell {
+                cell.setup()
+                return cell
+            }
         } else {
-            return UITableViewCell()
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell") as? NewsTableViewCell {
+                cell.setup()
+                return cell
+            }
         }
+        return UITableViewCell()
     }
 
 }
