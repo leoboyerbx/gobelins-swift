@@ -17,6 +17,9 @@
 		EDD4838925DD226A009D1D2E /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD4838825DD226A009D1D2E /* SettingsViewController.swift */; };
 		EDD4838C25DD2734009D1D2E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD4838B25DD2734009D1D2E /* ViewController.swift */; };
 		EDD4838F25DD2757009D1D2E /* ColorExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD4838E25DD2757009D1D2E /* ColorExtensions.swift */; };
+		EDD4839725DD2997009D1D2E /* UIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD4839625DD2997009D1D2E /* UIContext.swift */; };
+		EDD483FD25DD4432009D1D2E /* HeadTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD483FC25DD4432009D1D2E /* HeadTableViewCell.swift */; };
+		EDD4840025DD4443009D1D2E /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = EDD483FF25DD4442009D1D2E /* NewsTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +35,9 @@
 		EDD4838825DD226A009D1D2E /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		EDD4838B25DD2734009D1D2E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		EDD4838E25DD2757009D1D2E /* ColorExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtensions.swift; sourceTree = "<group>"; };
+		EDD4839625DD2997009D1D2E /* UIContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIContext.swift; sourceTree = "<group>"; };
+		EDD483FC25DD4432009D1D2E /* HeadTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadTableViewCell.swift; sourceTree = "<group>"; };
+		EDD483FF25DD4442009D1D2E /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,14 +70,15 @@
 		EDD4836E25DD21C8009D1D2E /* MaPetiteRegion */ = {
 			isa = PBXGroup;
 			children = (
-				EDD4836F25DD21C8009D1D2E /* AppDelegate.swift */,
-				EDD4837125DD21C8009D1D2E /* SceneDelegate.swift */,
+				EDD4839525DD2977009D1D2E /* UIContext */,
 				EDD4839125DD2897009D1D2E /* Controllers */,
-				EDD4837525DD21C8009D1D2E /* Main.storyboard */,
+				EDD4839325DD28BE009D1D2E /* Helpers */,
+				EDD4836F25DD21C8009D1D2E /* AppDelegate.swift */,
 				EDD4837825DD21CA009D1D2E /* Assets.xcassets */,
+				EDD4837125DD21C8009D1D2E /* SceneDelegate.swift */,
+				EDD4837525DD21C8009D1D2E /* Main.storyboard */,
 				EDD4837A25DD21CA009D1D2E /* LaunchScreen.storyboard */,
 				EDD4837D25DD21CA009D1D2E /* Info.plist */,
-				EDD4838E25DD2757009D1D2E /* ColorExtensions.swift */,
 			);
 			path = MaPetiteRegion;
 			sourceTree = "<group>";
@@ -79,12 +86,62 @@
 		EDD4839125DD2897009D1D2E /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
-				EDD4837325DD21C8009D1D2E /* HomeViewController.swift */,
-				EDD4838525DD225A009D1D2E /* NewsViewController.swift */,
-				EDD4838825DD226A009D1D2E /* SettingsViewController.swift */,
+				EDD4839A25DD40C3009D1D2E /* Home */,
+				EDD483F825DD428B009D1D2E /* News */,
+				EDD483FA25DD4292009D1D2E /* Settings */,
 				EDD4838B25DD2734009D1D2E /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		EDD4839325DD28BE009D1D2E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				EDD4838E25DD2757009D1D2E /* ColorExtensions.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		EDD4839525DD2977009D1D2E /* UIContext */ = {
+			isa = PBXGroup;
+			children = (
+				EDD4839625DD2997009D1D2E /* UIContext.swift */,
+			);
+			path = UIContext;
+			sourceTree = "<group>";
+		};
+		EDD4839A25DD40C3009D1D2E /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				EDD4837325DD21C8009D1D2E /* HomeViewController.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		EDD483F825DD428B009D1D2E /* News */ = {
+			isa = PBXGroup;
+			children = (
+				EDD4838525DD225A009D1D2E /* NewsViewController.swift */,
+				EDD4840225DD444F009D1D2E /* Cells */,
+			);
+			path = News;
+			sourceTree = "<group>";
+		};
+		EDD483FA25DD4292009D1D2E /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				EDD4838825DD226A009D1D2E /* SettingsViewController.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		EDD4840225DD444F009D1D2E /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				EDD483FF25DD4442009D1D2E /* NewsTableViewCell.swift */,
+				EDD483FC25DD4432009D1D2E /* HeadTableViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,9 +216,12 @@
 			files = (
 				EDD4838C25DD2734009D1D2E /* ViewController.swift in Sources */,
 				EDD4837425DD21C8009D1D2E /* HomeViewController.swift in Sources */,
+				EDD4840025DD4443009D1D2E /* NewsTableViewCell.swift in Sources */,
 				EDD4837025DD21C8009D1D2E /* AppDelegate.swift in Sources */,
 				EDD4837225DD21C8009D1D2E /* SceneDelegate.swift in Sources */,
 				EDD4838925DD226A009D1D2E /* SettingsViewController.swift in Sources */,
+				EDD4839725DD2997009D1D2E /* UIContext.swift in Sources */,
+				EDD483FD25DD4432009D1D2E /* HeadTableViewCell.swift in Sources */,
 				EDD4838625DD225A009D1D2E /* NewsViewController.swift in Sources */,
 				EDD4838F25DD2757009D1D2E /* ColorExtensions.swift in Sources */,
 			);
