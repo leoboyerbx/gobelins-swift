@@ -30,11 +30,12 @@ class NewsTableViewCell: UITableViewCell {
     func setup(model: NewsModelUI) {
         self.newsTitle.text = model.title
         self.newsHat.text = model.hat
-        self.newsImage.image = UIImage(named: "annecy_img")
+        self.newsImage.image = UIImage(named: model.imageUrl)
         
         containerRoundView.layer.cornerRadius = 23
         textBGView.backgroundColor = UIContext.Color.News.cellBGColor
         self.selectionStyle = .none
     }
+
 
 }

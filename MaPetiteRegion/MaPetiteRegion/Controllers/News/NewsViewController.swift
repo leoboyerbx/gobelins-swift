@@ -47,7 +47,15 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row != 0 {
-            self.performSegue(withIdentifier: "toNewsSingle", sender: self)           
+            self.performSegue(withIdentifier: "toNewsDetail", sender: self)
+        }
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toNewsDetail" {
+            if let destVC = segue.destination as? NewsDetailViewController {
+                destVC.modelUI = NewsModelUI.defaultModel()
+            }
         }
     }
 
