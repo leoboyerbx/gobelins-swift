@@ -25,13 +25,15 @@ class HeadTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func setup() {
-        self.cityName.text = "Annecy"
-        self.newsNumberLabel.text = "12 news"
-        self.cityImage.image = UIImage(named: "annecy_img")
-        self.backgroundColor = UIContext.Color.Global.annecyBGColor
-        self.roundedBottom.layer.cornerRadius = 30
+    func setup(model: NewsHeadModelUI) {
+        self.cityName.text = model.cityName
+        self.newsNumberLabel.text = model.nbNews
+        self.cityImage.image = UIImage(named: model.imageName.rawValue)
+        self.backgroundColor = model.backgroundColor
+        self.roundedBottom.layer.cornerRadius = 34
         self.roundedBottom.backgroundColor = .white
+        
+        self.selectionStyle = .none
     }
 
 }

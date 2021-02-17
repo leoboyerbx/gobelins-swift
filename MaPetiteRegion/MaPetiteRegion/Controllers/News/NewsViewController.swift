@@ -16,6 +16,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -26,22 +27,28 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         if indexPath.row == 0 {
             return 120
         }
-        return 300
+        return 330
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "newsHead") as? HeadTableViewCell {
-                cell.setup()
+                cell.setup(model: NewsHeadModelUI.lyonDefault())
                 return cell
             }
         } else {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell") as? NewsTableViewCell {
-                cell.setup()
+                cell.setup(model: NewsModelUI.defaultModel())
                 return cell
             }
         }
         return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row != 0 {
+            self.performSegue(withIdentifier: "toNewsSingle", sender: self)           
+        }
     }
 
 }

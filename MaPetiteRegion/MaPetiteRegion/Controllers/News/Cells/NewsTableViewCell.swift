@@ -12,6 +12,8 @@ class NewsTableViewCell: UITableViewCell {
     @IBOutlet weak var newsTitle: UILabel!
     @IBOutlet weak var newsHat: UILabel!
     @IBOutlet weak var newsImage: UIImageView!
+    @IBOutlet weak var containerRoundView: UIView!
+    @IBOutlet weak var textBGView: UIView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -25,10 +27,14 @@ class NewsTableViewCell: UITableViewCell {
     }
     
     
-    func setup() {
-        self.newsTitle.text = "Mon titre"
-        self.newsHat.text = "Chapô"
+    func setup(model: NewsModelUI) {
+        self.newsTitle.text = model.title
+        self.newsHat.text = model.hat
         self.newsImage.image = UIImage(named: "annecy_img")
+        
+        containerRoundView.layer.cornerRadius = 23
+        textBGView.backgroundColor = UIContext.Color.News.cellBGColor
+        self.selectionStyle = .none
     }
 
 }
