@@ -18,7 +18,7 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
             cell.numberLabel.text = "\(indexPath.row)"
             cell.backgroundColor = UIColor(red: 1, green: 0.86, blue: 0, alpha: 1)
             
-            cell.switchChangeAction = { value in
+            cell.sliderChangeAction = { value in
                 cell.backgroundColor = UIColor(red: 1, green: 0.86, blue: 0, alpha: CGFloat(value))
             }
             

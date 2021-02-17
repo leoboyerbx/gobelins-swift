@@ -42,17 +42,18 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ulv-7s-Xgf">
-                                                    <rect key="frame" x="57" y="55" width="49" height="31"/>
+                                                <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Uzi-XN-jPY">
+                                                    <rect key="frame" x="2" y="54" width="118" height="30"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <connections>
-                                                        <action selector="switchChanged:" destination="2zv-pE-Skt" eventType="valueChanged" id="pLI-nv-AMW"/>
+                                                        <action selector="sliderChanged:" destination="2zv-pE-Skt" eventType="valueChanged" id="8g5-Pn-kDX"/>
                                                     </connections>
-                                                </switch>
+                                                </slider>
                                             </subviews>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="123" height="101"/>
                                         <connections>
+                                            <outlet property="mySlider" destination="Uzi-XN-jPY" id="Yl7-zV-4Qr"/>
                                             <outlet property="numberLabel" destination="BA3-XN-wk4" id="12l-16-FvM"/>
                                         </connections>
                                     </collectionViewCell>

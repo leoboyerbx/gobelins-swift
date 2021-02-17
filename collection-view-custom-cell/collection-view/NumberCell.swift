@@ -8,15 +8,13 @@
 import UIKit
 
 class NumberCell: UICollectionViewCell {
-    var switchChangeAction: ((Float) -> ())?
+    var sliderChangeAction: ((Float) -> ())?
+    
+    @IBOutlet weak var mySlider: UISlider!
     
     @IBOutlet weak var numberLabel: UILabel!
-    @IBAction func switchChanged(_ sender: UISwitch) {
-        if (sender.isOn) {
-            switchChangeAction?(1)
-        } else {
-            switchChangeAction?(0)
-        }
-    }
     
+    @IBAction func sliderChanged(_ sender: UISlider) {
+        sliderChangeAction?(sender.value)
+    }
 }
