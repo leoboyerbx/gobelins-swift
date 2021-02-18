@@ -28,6 +28,9 @@ class UIContext {
             static var grenobleBGColor  =   UIColor.rgba(r: 236, g: 228, b: 240, a: 1)
             
             static var tabBarBGColor    =   UIColor.rgba(r: 242, g: 242, b: 242, a: 1)
+            static var themeColor       =   UIColor.rgba(r: 80,  g: 191, b: 165, a: 1)
+            static var lightGreyColor   =   UIColor.rgba(r: 112, g: 112, b: 112, a: 1)
+            static var lightThemeColor  =   UIColor.rgba(r: 228, g: 240, b: 237, a: 1)
         }
     }
     struct Font {

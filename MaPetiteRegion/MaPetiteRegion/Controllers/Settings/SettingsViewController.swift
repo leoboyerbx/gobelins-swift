@@ -16,18 +16,35 @@ class SettingsViewController: UIViewController, UITableViewDelegate, UITableView
         
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.separatorStyle = .none
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 1 + CityManager.instance.cities.count
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        if indexPath.row == 0 {
+            return 150
+        }
+        return 50
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell") as? UITableViewCell {
-            return cell
-        } else {
-            return UITableViewCell()
+        if indexPath.row == 0 {
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "settingsHead") as? SettingsHeadTableViewCell {
+                cell.setup()
+                return cell
+            }
         }
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "settingsCell") as? SettingsTableViewCell {
+            cell.setup(model: CityManager.instance.cities[indexPath.row - 1])
+            cell.actionOnSwitch = { val in
+                CityManager.instance.cities[indexPath.row - 1].isEnabed = val
+            }
+            return cell
+        }
+        return UITableViewCell()
     }
 
 }

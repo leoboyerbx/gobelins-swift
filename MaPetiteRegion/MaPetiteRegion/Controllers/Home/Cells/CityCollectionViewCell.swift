@@ -12,9 +12,10 @@ class CityCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var nbNewsLabel: UILabel!
     @IBOutlet weak var imgView: UIImageView!
     
-    func setup() {
+    func setup(model: CitySettingsModelUI) {
         self.backgroundColor = .white
-        
+        cityNameLabel.text = model.cityName
+        imgView.image = UIImage(named: model.bgImage.rawValue)
     }
     
 }

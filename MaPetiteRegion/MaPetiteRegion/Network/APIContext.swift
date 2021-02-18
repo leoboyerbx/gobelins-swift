@@ -15,7 +15,7 @@ class APIContext {
     }
     struct OpenWeather {
         static func urlForCityWeather(cityName: String) -> String {
-            return "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=7e3ade8e01c0a1382a8a06b11a7a84ec&lang=fr"
+            return "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=7e3ade8e01c0a1382a8a06b11a7a84ec&lang=fr&units=metric"
         }
     }
 }

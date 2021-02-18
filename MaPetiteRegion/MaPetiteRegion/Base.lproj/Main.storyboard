@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="MaPetiteRegion" customModuleProvider="target" sceneMemberID="viewController">
@@ -28,10 +28,10 @@
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="head" id="aby-Aw-piw" customClass="HeadCollectionViewCell" customModule="MaPetiteRegion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="3XY-IO-c5E">
-                                            <rect key="frame" x="0.0" y="0.0" width="414" height="270"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="265"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home_bg" translatesAutoresizingMaskIntoConstraints="NO" id="5Wy-Ch-qsU">
@@ -52,14 +52,14 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="414" height="270"/>
+                                        <size key="customSize" width="414" height="265"/>
                                         <connections>
                                             <outlet property="cityNameLabel" destination="DPs-l6-qGx" id="0Lf-5r-80N"/>
                                             <outlet property="roundedBottom" destination="IiD-Zt-w9n" id="452-OD-5GM"/>
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="weather" id="Jqi-0O-u3j" customClass="WeatherCollectionViewCell" customModule="MaPetiteRegion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="270" width="414" height="150"/>
+                                        <rect key="frame" x="0.0" y="265" width="414" height="150"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="aMM-nj-Why">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
@@ -93,7 +93,7 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="text" id="D4c-0N-J9W" customClass="TextCollectionViewCell" customModule="MaPetiteRegion" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="420" width="414" height="50"/>
+                                        <rect key="frame" x="0.0" y="415" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BR4-QC-24t">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
@@ -114,18 +114,18 @@
                                         </connections>
                                     </collectionViewCell>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="city" id="ptD-0T-Mhf" customClass="CityCollectionViewCell" customModule="MaPetiteRegion" customModuleProvider="target">
-                                        <rect key="frame" x="103.5" y="470" width="207" height="166"/>
+                                        <rect key="frame" x="103.5" y="465" width="207" height="166"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="k0d-kF-Iiy">
                                             <rect key="frame" x="0.0" y="0.0" width="207" height="166"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="lyon_bg" translatesAutoresizingMaskIntoConstraints="NO" id="mL3-Wp-gPS">
-                                                    <rect key="frame" x="14" y="1" width="180" height="165"/>
+                                                    <rect key="frame" x="8" y="1" width="191" height="165"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Lyon" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jGr-Oq-hxc">
-                                                    <rect key="frame" x="30" y="39" width="50" height="29"/>
+                                                    <rect key="frame" x="30" y="39" width="124" height="29"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                                     <nil key="textColor"/>
@@ -159,7 +159,9 @@
                             <constraint firstItem="COv-Qr-HlW" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="zsE-vT-81U"/>
                         </constraints>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="8Lt-Rq-GKv"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="home_icon" selectedImage="home_icon" id="8Lt-Rq-GKv">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="collectionView" destination="COv-Qr-HlW" id="x7l-wz-suf"/>
                     </connections>
@@ -168,7 +170,7 @@
             </objects>
             <point key="canvasLocation" x="986.95652173913049" y="-101.11607142857143"/>
         </scene>
-        <!--Item-->
+        <!--Actus-->
         <scene sceneID="GND-br-r5X">
             <objects>
                 <viewController id="8Rc-sN-6u1" customClass="NewsViewController" customModule="MaPetiteRegion" customModuleProvider="target" sceneMemberID="viewController">
@@ -276,7 +278,9 @@
                         <viewLayoutGuide key="safeArea" id="lmz-ge-6pJ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="zmc-Nn-llW"/>
+                    <tabBarItem key="tabBarItem" title="Actus" image="news_icon" selectedImage="news_icon_faded" id="zmc-Nn-llW">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                    </tabBarItem>
                     <connections>
                         <outlet property="tableView" destination="A9C-op-ME5" id="HDr-MM-iUK"/>
                         <segue destination="9G3-mR-Yhk" kind="presentation" identifier="toNewsDetail" id="GkB-ga-t9P"/>
@@ -345,7 +349,7 @@
             </objects>
             <point key="canvasLocation" x="2000.0000000000002" y="646.875"/>
         </scene>
-        <!--Item-->
+        <!--Réglages-->
         <scene sceneID="VQq-EM-QkJ">
             <objects>
                 <viewController id="H3B-vN-d2k" customClass="SettingsViewController" customModule="MaPetiteRegion" customModuleProvider="target" sceneMemberID="viewController">
@@ -354,17 +358,75 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="wo1-dP-rNT">
-                                <rect key="frame" x="87" y="119" width="240" height="128"/>
+                                <rect key="frame" x="0.0" y="33" width="414" height="780"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" id="IOp-Dp-vfS">
-                                        <rect key="frame" x="0.0" y="28" width="240" height="43.5"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsHead" rowHeight="150" id="YcC-Us-wsQ" customClass="SettingsHeadTableViewCell" customModule="MaPetiteRegion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="150"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="YcC-Us-wsQ" id="wc5-dw-1L7">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Settings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqo-M7-xxv">
+                                                    <rect key="frame" x="20" y="41" width="159" height="28"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Villes que je veux voir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdC-m1-roI">
+                                                    <rect key="frame" x="20" y="77" width="163" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0bN-YV-LYG">
+                                                    <rect key="frame" x="0.0" y="110" width="414" height="125"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                                </view>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="settings_bg" translatesAutoresizingMaskIntoConstraints="NO" id="rSu-YQ-ffm">
+                                                    <rect key="frame" x="187" y="0.0" width="227" height="111"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="roundedBottom" destination="0bN-YV-LYG" id="Nbt-d2-FEg"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" rowHeight="50" id="IOp-Dp-vfS" customClass="SettingsTableViewCell" customModule="MaPetiteRegion" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="178" width="414" height="50"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IOp-Dp-vfS" id="KdD-1N-DnF">
-                                            <rect key="frame" x="0.0" y="0.0" width="240" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="City name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-aa-KTC">
+                                                    <rect key="frame" x="20" y="15" width="184" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ecs-ww-PQZ">
+                                                    <rect key="frame" x="347" y="11" width="49" height="31"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <color key="onTintColor" systemColor="systemPurpleColor"/>
+                                                    <connections>
+                                                        <action selector="onSwitch:" destination="IOp-Dp-vfS" eventType="valueChanged" id="r7z-FA-J5u"/>
+                                                    </connections>
+                                                </switch>
+                                            </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="activeCitySwitch" destination="ecs-ww-PQZ" id="N7m-2K-RvJ"/>
+                                            <outlet property="cityNameLabel" destination="uc7-aa-KTC" id="Ui9-Rx-hAp"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -372,7 +434,12 @@
                         <viewLayoutGuide key="safeArea" id="aDU-bU-EXv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="dxI-0i-VX8"/>
+                    <tabBarItem key="tabBarItem" title="Réglages" image="settings_icon" selectedImage="settings_icon_faded" id="dxI-0i-VX8">
+                        <inset key="imageInsets" minX="0.0" minY="8" maxX="0.0" maxY="8"/>
+                    </tabBarItem>
+                    <connections>
+                        <outlet property="tableView" destination="wo1-dP-rNT" id="RCC-3r-5Vz"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8FO-fw-Je3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -401,8 +468,14 @@
     </scenes>
     <resources>
         <image name="home_bg" width="375" height="252"/>
+        <image name="home_icon" width="36" height="36"/>
         <image name="lyon_bg" width="150" height="113"/>
         <image name="meteo_bg" width="313" height="113"/>
+        <image name="news_icon" width="32" height="32"/>
+        <image name="news_icon_faded" width="32.5" height="32.5"/>
+        <image name="settings_bg" width="193" height="98"/>
+        <image name="settings_icon" width="31" height="32.5"/>
+        <image name="settings_icon_faded" width="31.5" height="33"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
@@ -411,6 +484,9 @@
         </systemColor>
         <systemColor name="systemIndigoColor">
             <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

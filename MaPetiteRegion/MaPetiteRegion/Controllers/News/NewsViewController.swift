@@ -20,8 +20,11 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
-        
-        NetworkManager.instance.getInfos(for: "Lyon") { infos in
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        NetworkManager.instance.getInfos(for: CityManager.instance.currentCity) { infos in
             self.models = NewsModelUI.createModelsFromJsonModel(model: infos)
             self.tableView.reloadData()
         }

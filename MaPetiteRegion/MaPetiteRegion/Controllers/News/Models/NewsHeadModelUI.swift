@@ -8,18 +8,11 @@
 import UIKit
 
 struct NewsHeadModelUI {
-    enum ImageName:String {
-        case Annecy = "annecy_img"
-        case Annemasse = "annemasse_img"
-        case Grenoble = "grenoble_img"
-        case Lyon = "lyon_img"
-        case Aix = "aix_img"
-        case Chambery = "chambery_img"
-    }
+    
     
     var cityName: String = ""
     var nbNews: String = ""
-    var imageName: ImageName = .Annecy
+    var imageName: CityManager.ImageName = .Annecy
     var backgroundColor: UIColor = .cyan
     
     static func annecyDefault (nbNews: Int = 25) -> NewsHeadModelUI {
