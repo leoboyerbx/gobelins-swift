@@ -11,6 +11,7 @@ class UIContext {
     struct Color {
         struct Home {
             static var weatherBGColor   =   UIColor.rgba(r: 228, g: 240, b: 237, a: 1)
+            static var headerBGColor    =   UIColor.rgba(r: 80, g: 191, b: 165, a: 1)
         }
         struct News {
             static var cellBGColor      =   UIColor.rgba(r: 250, g: 250, b: 250, a: 1)

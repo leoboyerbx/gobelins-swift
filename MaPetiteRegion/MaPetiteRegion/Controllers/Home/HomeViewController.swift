@@ -16,6 +16,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        collectionView.backgroundColor = UIContext.Color.Home.headerBGColor
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -25,7 +26,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let screenWidth = self.view.frame.width
         if indexPath.item == 0 {
-            return CGSize(width: screenWidth, height: 300)
+            return CGSize(width: screenWidth, height: 270)
             
         }
         if indexPath.item == 1 {
@@ -43,28 +44,28 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "head", for: indexPath)
-            cell.backgroundColor = .red
-            return cell
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "head", for: indexPath) as? HeadCollectionViewCell {
+                cell.setup(cityName: "Annecy")
+                return cell
+            }
         }
         if indexPath.item == 1 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weather", for: indexPath)
-            cell.backgroundColor = .green
-            return cell
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "weather", for: indexPath) as? WeatherCollectionViewCell {
+                cell.setup()
+                return cell
+            }
         }
         if indexPath.item == 2 {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "text", for: indexPath)
-            cell.backgroundColor = .orange
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "text", for: indexPath) as? TextCollectionViewCell {
+                cell.setup()
+                return cell
+            }
+        }
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "city", for: indexPath) as? CityCollectionViewCell {
+            cell.setup()
             return cell
         }
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "city", for: indexPath)
-        cell.backgroundColor = .blue
-        return cell
-//        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "homeCell", for: indexPath) as? UICollectionViewCell {
-//            return cell
-//        } else {
-//            return UICollectionViewCell()
-//        }
+        return UICollectionViewCell()
     }
 }
 
