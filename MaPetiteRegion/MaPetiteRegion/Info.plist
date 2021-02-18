@@ -62,5 +62,7 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
+	<key>OpenWeatherApiKey</key>
+	<string>7e3ade8e01c0a1382a8a06b11a7a84ec</string>
 </dict>
 </plist>

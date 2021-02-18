@@ -8,6 +8,8 @@
 import UIKit
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+//    var records: [Record] = []
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -17,6 +19,17 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.delegate = self
         tableView.dataSource = self
         tableView.separatorStyle = .none
+        
+        NetworkManager.instance.getInfos(for: "Annecy") { infos in
+            print(infos)
+//            if let records = infos.records {
+//                self.records = records
+//            }
+        }
+        
+        NetworkManager.instance.getWeather(for: "Annecy") { weather in
+            print(weather)
+        }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
