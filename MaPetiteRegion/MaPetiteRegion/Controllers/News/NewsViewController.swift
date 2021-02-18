@@ -9,7 +9,8 @@ import UIKit
 
 class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
-//    var records: [Record] = []
+    var models: [NewsModelUI] = []
+    var selectedModel: NewsModelUI?
 
     @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
@@ -20,25 +21,19 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
         tableView.dataSource = self
         tableView.separatorStyle = .none
         
-        NetworkManager.instance.getInfos(for: "Annecy") { infos in
-            print(infos)
-//            if let records = infos.records {
-//                self.records = records
-//            }
-        }
-        
-        NetworkManager.instance.getWeather(for: "Annecy") { weather in
-            print(weather)
+        NetworkManager.instance.getInfos(for: "Lyon") { infos in
+            self.models = NewsModelUI.createModelsFromJsonModel(model: infos)
+            self.tableView.reloadData()
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1 + 3
+        return 1 + models.count
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0 {
-            return 120
+            return 150
         }
         return 330
     }
@@ -51,7 +46,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         } else {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "newsCell") as? NewsTableViewCell {
-                cell.setup(model: NewsModelUI.defaultModel())
+                cell.setup(model: models[indexPath.row - 1])
                 return cell
             }
         }
@@ -60,14 +55,17 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if indexPath.row != 0 {
+            self.selectedModel = models[indexPath.row - 1]
             self.performSegue(withIdentifier: "toNewsDetail", sender: self)
         }
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toNewsDetail" {
-            if let destVC = segue.destination as? NewsDetailViewController {
-                destVC.modelUI = NewsModelUI.defaultModel()
+            if let destVC = segue.destination as? NewsDetailViewController,
+               let senderController = sender as? NewsViewController,
+               let model = senderController.selectedModel {
+                destVC.modelUI = model
             }
         }
     }

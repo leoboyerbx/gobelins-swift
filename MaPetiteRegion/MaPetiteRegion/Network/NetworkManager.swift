@@ -23,8 +23,8 @@ class NetworkManager {
         }
     }
     
-    func getInfos(for city: String, callback: @escaping (Infos) -> ()) {
-        get(url: "https://public.opendatasoft.com/api/records/1.0/search/?dataset=evenements-publics-cibul&q=\(city)&lang=fr&facet=placename&facet=department&facet=region&facet=city&facet=date_start&facet=date_end&facet=pricing_info&facet=updated_at&facet=city_district") { (data) in
+    func getInfos(for cityName: String, callback: @escaping (Infos) -> ()) {
+        get(url: APIContext.OpenDataSoft.urlForCityInfos(cityName: cityName)) { (data) in
             let decoder = JSONDecoder()
 
             do {
@@ -37,7 +37,7 @@ class NetworkManager {
     }
     
     func getWeather(for cityName: String, callback: @escaping (WeatherInfo) -> ()) {
-        get(url: "https://api.openweathermap.org/data/2.5/weather?q=\(cityName)&appid=7e3ade8e01c0a1382a8a06b11a7a84ec&lang=fr") { (data) in
+        get(url: APIContext.OpenWeather.urlForCityWeather(cityName: cityName)) { (data) in
             let decoder = JSONDecoder()
 
             do {
