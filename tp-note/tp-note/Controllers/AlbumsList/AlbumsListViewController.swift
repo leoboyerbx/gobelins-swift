@@ -7,9 +7,10 @@
 
 import UIKit
 
-class AlbumsListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class AlbumsListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
     var userId:Int = 0
+    var albums: [AlbumModelUI] = []
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -20,12 +21,19 @@ class AlbumsListViewController: UIViewController, UICollectionViewDelegate, UICo
         collectionView.dataSource = self
     }
     
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        let screenWidth = self.view.frame.width
+        let halfScreen = screenWidth/2.0
+        return CGSize(width:halfScreen, height: 130 )
+    }
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 1000
+        return albums.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCell", for: indexPath) as? UICollectionViewCell {
+        if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "albumCell", for: indexPath) as? AlbumCollectionViewCell {
+            cell.setup(model: albums[indexPath.row])
             return cell
         } else {
             return UICollectionViewCell()
@@ -35,7 +43,8 @@ class AlbumsListViewController: UIViewController, UICollectionViewDelegate, UICo
     override func viewWillAppear(_ animated: Bool) {
         NetworkManager.instance.getAlbums(from: userId) { (albums) in
             AlbumModelUI.createPopulatedModelsFromJsonModel(model: albums) { (models) in
-                print(models)
+                self.albums = models
+                self.collectionView.reloadData()
             }
         }
     }

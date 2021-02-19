@@ -9,7 +9,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Users List View Controller-->
+        <!--Users-->
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="UsersListViewController" customModule="tp_note" customModuleProvider="target" sceneMemberID="viewController">
@@ -64,7 +64,7 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="PhR-ka-4ql"/>
+                    <navigationItem key="navigationItem" title="Users" id="PhR-ka-4ql"/>
                     <connections>
                         <outlet property="tableView" destination="jnf-ga-ao5" id="9hj-pf-UNZ"/>
                         <segue destination="7hD-3v-kVh" kind="show" identifier="toAlbumsList" id="ivI-Rm-jhr"/>
@@ -74,7 +74,7 @@
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="137.94642857142856"/>
         </scene>
-        <!--Albums List View Controller-->
+        <!--Albums-->
         <scene sceneID="1e1-SD-R78">
             <objects>
                 <viewController id="7hD-3v-kVh" customClass="AlbumsListViewController" customModule="tp_note" customModuleProvider="target" sceneMemberID="viewController">
@@ -86,18 +86,18 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="bjV-Fq-rtE">
-                                    <size key="itemSize" width="205" height="128"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="0.0" minimumInteritemSpacing="0.0" id="bjV-Fq-rtE">
+                                    <size key="itemSize" width="198" height="128"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
-                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="NiY-Id-BYx">
-                                        <rect key="frame" x="104.5" y="0.0" width="205" height="128"/>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="albumCell" id="NiY-Id-BYx" customClass="AlbumCollectionViewCell" customModule="tp_note" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="q9d-j5-9ke">
-                                            <rect key="frame" x="0.0" y="0.0" width="205" height="128"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="200" height="130"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Titre" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oy3-LM-m27">
@@ -109,7 +109,10 @@
                                                 </label>
                                             </subviews>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="205" height="128"/>
+                                        <size key="customSize" width="200" height="130"/>
+                                        <connections>
+                                            <outlet property="titleLabel" destination="Oy3-LM-m27" id="gjr-W1-xvn"/>
+                                        </connections>
                                     </collectionViewCell>
                                 </cells>
                             </collectionView>
@@ -117,7 +120,7 @@
                         <viewLayoutGuide key="safeArea" id="Snj-Yq-Ypa"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="25f-3M-GBS"/>
+                    <navigationItem key="navigationItem" title="Albums" id="25f-3M-GBS"/>
                     <connections>
                         <outlet property="collectionView" destination="Rat-q8-Ut9" id="UNc-rp-iXe"/>
                         <segue destination="vTh-Pf-67Y" kind="show" id="U6g-w2-ajS"/>
@@ -127,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="3147.826086956522" y="474.77678571428567"/>
         </scene>
-        <!--Single Album View Controller-->
+        <!--Photos-->
         <scene sceneID="1qV-ZP-nYJ">
             <objects>
                 <viewController id="vTh-Pf-67Y" customClass="SingleAlbumViewController" customModule="tp_note" customModuleProvider="target" sceneMemberID="viewController">
@@ -137,7 +140,9 @@
                         <viewLayoutGuide key="safeArea" id="YW8-xd-gHn"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="XKx-9t-WmS"/>
+                    <navigationItem key="navigationItem" title="Photos" id="XKx-9t-WmS">
+                        <barButtonItem key="backBarButtonItem" title="Albums" id="6Gy-P9-BBr"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L18-uF-hrS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -17,6 +17,7 @@
 		ED289E1525DFE3FA00AC1DDD /* UsersMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1425DFE3FA00AC1DDD /* UsersMapViewController.swift */; };
 		ED289E1825DFE40A00AC1DDD /* AlbumsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1725DFE40A00AC1DDD /* AlbumsListViewController.swift */; };
 		ED289E1B25DFE41B00AC1DDD /* SingleAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */; };
+		ED5D50FB25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */; };
 		ED9171BA25DFE67600DDF1BE /* APIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9171B925DFE67600DDF1BE /* APIContext.swift */; };
 		ED9171DD25DFE6C900DDF1BE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9171C725DFE6B900DDF1BE /* Alamofire.framework */; };
 		ED9171DE25DFE6C900DDF1BE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9171C725DFE6B900DDF1BE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -110,6 +111,7 @@
 		ED289E1425DFE3FA00AC1DDD /* UsersMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMapViewController.swift; sourceTree = "<group>"; };
 		ED289E1725DFE40A00AC1DDD /* AlbumsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListViewController.swift; sourceTree = "<group>"; };
 		ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAlbumViewController.swift; sourceTree = "<group>"; };
+		ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED9171B925DFE67600DDF1BE /* APIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIContext.swift; path = ../../../MaPetiteRegion/MaPetiteRegion/Network/APIContext.swift; sourceTree = "<group>"; };
 		ED9171BC25DFE6B800DDF1BE /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		ED9171E025DFE72800DDF1BE /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
@@ -262,6 +264,7 @@
 		EDFCD0E925DFF35D004B3895 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -395,6 +398,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED5D50FB25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift in Sources */,
 				ED9171E725DFE8A400DDF1BE /* NetworkManager.swift in Sources */,
 				ED289E0125DFE30300AC1DDD /* ViewController.swift in Sources */,
 				ED9171E525DFE7B800DDF1BE /* UserModelUI.swift in Sources */,
