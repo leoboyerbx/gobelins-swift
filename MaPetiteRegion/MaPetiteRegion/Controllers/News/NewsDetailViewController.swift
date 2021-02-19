@@ -28,7 +28,9 @@ class NewsDetailViewController: UIViewController {
             dateLabel.text = model.date
             titleLabel.text = model.title
             contentTextView.text = model.fullContent
-            imageView.image = UIImage(named: model.imageUrl)
+            if let url = URL(string: model.imageUrl) {
+                imageView.af.setImage(withURL: url, cacheKey: nil, placeholderImage: UIImage(named: "annecy_bg"), serializer: nil, imageTransition: .noTransition, runImageTransitionIfCached: false, completion: nil)
+            }
         }
         
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class NewsTableViewCell: UITableViewCell {
 
@@ -30,8 +31,20 @@ class NewsTableViewCell: UITableViewCell {
     func setup(model: NewsModelUI) {
         self.newsTitle.text = model.title
         self.newsHat.text = model.hat
-        self.newsImage.image = UIImage(named: model.imageUrl)
-        
+        if let url = URL(string: model.imageUrl) {
+            let request = URLRequest(url: url)
+            newsImage.af.setImage(withURLRequest: request,
+                                  cacheKey: model.imageUrl,
+                                  placeholderImage: UIImage(named: "annecy_bg"),
+                                  serializer: nil,
+                                  filter: nil,
+                                  progress: nil,
+                                  progressQueue: .global(),
+                                  imageTransition: .noTransition,
+                                  runImageTransitionIfCached: false,
+                                  completion: nil
+            )
+        }
         containerRoundView.layer.cornerRadius = 23
         textBGView.backgroundColor = UIContext.Color.News.cellBGColor
         self.selectionStyle = .none

@@ -30,7 +30,7 @@ class CityManager {
         CitySettingsModelUI(cityName: "Grenoble",isEnabed: true, bgImage: .Grenoble),
         CitySettingsModelUI(cityName: "Annecy",isEnabed: true, bgImage: .Annecy),
         CitySettingsModelUI(cityName: "Lyon",isEnabed: true, bgImage: .Lyon),
-        CitySettingsModelUI(cityName: "Chambéry",isEnabed: true, bgImage: .Chambery),
+        CitySettingsModelUI(cityName: "Chambery",isEnabed: true, bgImage: .Chambery),
         CitySettingsModelUI(cityName: "Aix-les-bains",isEnabed: true, bgImage: .Aix),
         CitySettingsModelUI(cityName: "Annemasse",isEnabed: true, bgImage: .Annemasse),
     ]

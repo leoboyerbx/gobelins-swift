@@ -98,6 +98,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if indexPath.item >= 3 {
+            print("select")
             let index = indexPath.item - 3
             CityManager.instance.currentCity = CityManager.instance.enabledCities[index].cityName
             updateWeather() // will reload table
