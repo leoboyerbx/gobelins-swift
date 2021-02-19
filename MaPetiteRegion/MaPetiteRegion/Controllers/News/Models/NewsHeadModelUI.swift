@@ -33,4 +33,23 @@ struct NewsHeadModelUI {
     static func chamberyDefault (nbNews: Int = 25) -> NewsHeadModelUI {
         return NewsHeadModelUI(cityName: "Chambéry", nbNews: "\(nbNews) news", imageName: .Chambery, backgroundColor: UIContext.Color.Global.chamberyBGColor)
     }
+    
+    static func createFromCity(named: String) -> NewsHeadModelUI {
+        switch named {
+        case "annecy":
+            return annecyDefault()
+        case "lyon":
+            return lyonDefault()
+        case "aix-les-bains":
+            return aixDefault()
+        case "grenoble":
+            return grenobleDefault()
+        case "chambery":
+            return chamberyDefault()
+        case "annemasse":
+            return annemasseDefault()
+        default:
+            return annecyDefault()
+        }
+    }
 }

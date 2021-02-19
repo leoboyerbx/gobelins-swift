@@ -6,6 +6,7 @@
 //
 
 import UIKit
+//import Kingfisher
 import AlamofireImage
 
 class NewsTableViewCell: UITableViewCell {
@@ -31,7 +32,11 @@ class NewsTableViewCell: UITableViewCell {
     func setup(model: NewsModelUI) {
         self.newsTitle.text = model.title
         self.newsHat.text = model.hat
+        
         if let url = URL(string: model.imageUrl) {
+//            newsImage.kf.setImage(with: url,
+//                                  placeholder: UIImage(named: "annecy_bg"),
+//                                  options: [.cacheOriginalImage])
             let request = URLRequest(url: url)
             newsImage.af.setImage(withURLRequest: request,
                                   cacheKey: model.imageUrl,
@@ -41,9 +46,14 @@ class NewsTableViewCell: UITableViewCell {
                                   progress: nil,
                                   progressQueue: .global(),
                                   imageTransition: .noTransition,
-                                  runImageTransitionIfCached: false,
-                                  completion: nil
-            )
+                                  runImageTransitionIfCached: false) { (response) in
+                if let e = response.error {
+                    print(e)
+                    self.newsImage.image = UIImage(named: "annecy_bg")
+                }
+            }
+        } else {
+            newsImage.image = UIImage(named: "annecy_bg")
         }
         containerRoundView.layer.cornerRadius = 23
         textBGView.backgroundColor = UIContext.Color.News.cellBGColor

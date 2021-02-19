@@ -73,7 +73,7 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if indexPath.item == 0 {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "head", for: indexPath) as? HeadCollectionViewCell {
-                cell.setup(cityName: CityManager.instance.currentCity)
+                cell.setup(cityName: CityManager.instance.currentCityBeautifiedName)
                 return cell
             }
         }
@@ -100,7 +100,11 @@ class HomeViewController: UIViewController, UICollectionViewDelegate, UICollecti
         if indexPath.item >= 3 {
             print("select")
             let index = indexPath.item - 3
-            CityManager.instance.currentCity = CityManager.instance.enabledCities[index].cityName
+            let beautifiedCityName = CityManager.instance.enabledCities[index].cityName
+            let cityName = beautifiedCityName.folding(options: .diacriticInsensitive, locale: .current).lowercased()
+            CityManager.instance.currentCity = cityName
+            CityManager.instance.currentCityBeautifiedName = beautifiedCityName
+        
             updateWeather() // will reload table
         }
     }

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AlamofireImage
 
 class NewsDetailViewController: UIViewController {
 
@@ -20,7 +21,6 @@ class NewsDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
         // Do any additional setup after loading the view.
         fullContentView.layer.cornerRadius = 23
         contentTextView.isEditable = false
@@ -29,7 +29,22 @@ class NewsDetailViewController: UIViewController {
             titleLabel.text = model.title
             contentTextView.text = model.fullContent
             if let url = URL(string: model.imageUrl) {
-                imageView.af.setImage(withURL: url, cacheKey: nil, placeholderImage: UIImage(named: "annecy_bg"), serializer: nil, imageTransition: .noTransition, runImageTransitionIfCached: false, completion: nil)
+                let request = URLRequest(url: url)
+                imageView.af.setImage(withURLRequest: request,
+                                      cacheKey: model.imageUrl,
+                                      placeholderImage: UIImage(named: "annecy_bg"),
+                                      serializer: nil,
+                                      filter: nil,
+                                      progress: nil,
+                                      progressQueue: .global(),
+                                      imageTransition: .noTransition,
+                                      runImageTransitionIfCached: false) { (response) in
+                    if let _ = response.error {
+                        self.imageView.image = UIImage(named: "annecy_bg")
+                    }
+                }
+            } else {
+                imageView.image = UIImage(named: "annecy_bg")
             }
         }
         

@@ -44,7 +44,7 @@ class NewsViewController: UIViewController, UITableViewDataSource, UITableViewDe
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             if let cell = tableView.dequeueReusableCell(withIdentifier: "newsHead") as? HeadTableViewCell {
-                cell.setup(model: NewsHeadModelUI.lyonDefault())
+                cell.setup(model: NewsHeadModelUI.createFromCity(named: CityManager.instance.currentCity))
                 return cell
             }
         } else {
