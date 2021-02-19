@@ -11,6 +11,7 @@ class AlbumsListViewController: UIViewController, UICollectionViewDelegate, UICo
     
     var userId:Int = 0
     var albums: [AlbumModelUI] = []
+    var selectedAlbum: AlbumModelUI?
 
     @IBOutlet weak var collectionView: UICollectionView!
     override func viewDidLoad() {
@@ -19,6 +20,12 @@ class AlbumsListViewController: UIViewController, UICollectionViewDelegate, UICo
         
         collectionView.delegate = self
         collectionView.dataSource = self
+        NetworkManager.instance.getAlbums(from: userId) { (albums) in
+            AlbumModelUI.createPopulatedModelsFromJsonModel(model: albums) { (models) in
+                self.albums = models
+                self.collectionView.reloadData()
+            }
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
@@ -40,15 +47,21 @@ class AlbumsListViewController: UIViewController, UICollectionViewDelegate, UICo
         }
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        NetworkManager.instance.getAlbums(from: userId) { (albums) in
-            AlbumModelUI.createPopulatedModelsFromJsonModel(model: albums) { (models) in
-                self.albums = models
-                self.collectionView.reloadData()
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        self.selectedAlbum = albums[indexPath.row]
+        self.performSegue(withIdentifier: "toSingleAlbum", sender: self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toSingleAlbum" {
+            if let destVC = segue.destination as? SingleAlbumViewController,
+               let senderController = sender as? AlbumsListViewController,
+               let album = senderController.selectedAlbum {
+                destVC.photos = album.photos
             }
         }
     }
-    
+        
 
     /*
     // MARK: - Navigation

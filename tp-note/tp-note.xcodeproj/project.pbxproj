@@ -18,6 +18,7 @@
 		ED289E1825DFE40A00AC1DDD /* AlbumsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1725DFE40A00AC1DDD /* AlbumsListViewController.swift */; };
 		ED289E1B25DFE41B00AC1DDD /* SingleAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */; };
 		ED5D50FB25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */; };
+		ED5D510525DFFA4B00FECBDC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D510425DFFA4B00FECBDC /* PhotoCollectionViewCell.swift */; };
 		ED9171BA25DFE67600DDF1BE /* APIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9171B925DFE67600DDF1BE /* APIContext.swift */; };
 		ED9171DD25DFE6C900DDF1BE /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED9171C725DFE6B900DDF1BE /* Alamofire.framework */; };
 		ED9171DE25DFE6C900DDF1BE /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED9171C725DFE6B900DDF1BE /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -112,6 +113,7 @@
 		ED289E1725DFE40A00AC1DDD /* AlbumsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListViewController.swift; sourceTree = "<group>"; };
 		ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAlbumViewController.swift; sourceTree = "<group>"; };
 		ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
+		ED5D510425DFFA4B00FECBDC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED9171B925DFE67600DDF1BE /* APIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIContext.swift; path = ../../../MaPetiteRegion/MaPetiteRegion/Network/APIContext.swift; sourceTree = "<group>"; };
 		ED9171BC25DFE6B800DDF1BE /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
 		ED9171E025DFE72800DDF1BE /* UsersModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersModel.swift; sourceTree = "<group>"; };
@@ -177,9 +179,26 @@
 				EDC2F29F25DFE58B00923CCE /* UsersList */,
 				ED289E1425DFE3FA00AC1DDD /* UsersMapViewController.swift */,
 				EDFCD0E525DFF329004B3895 /* AlbumsList */,
-				ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */,
+				ED5D510325DFFA3200FECBDC /* SingleAlbum */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED5D510325DFFA3200FECBDC /* SingleAlbum */ = {
+			isa = PBXGroup;
+			children = (
+				ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */,
+				ED5D510625DFFA5000FECBDC /* Cells */,
+			);
+			path = SingleAlbum;
+			sourceTree = "<group>";
+		};
+		ED5D510625DFFA5000FECBDC /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				ED5D510425DFFA4B00FECBDC /* PhotoCollectionViewCell.swift */,
+			);
+			path = Cells;
 			sourceTree = "<group>";
 		};
 		ED9171B225DFE63900DDF1BE /* Network */ = {
@@ -402,6 +421,7 @@
 				ED9171E725DFE8A400DDF1BE /* NetworkManager.swift in Sources */,
 				ED289E0125DFE30300AC1DDD /* ViewController.swift in Sources */,
 				ED9171E525DFE7B800DDF1BE /* UserModelUI.swift in Sources */,
+				ED5D510525DFFA4B00FECBDC /* PhotoCollectionViewCell.swift in Sources */,
 				EDFCD0E425DFF2AC004B3895 /* PhotosModel.swift in Sources */,
 				ED9171BA25DFE67600DDF1BE /* APIContext.swift in Sources */,
 				ED289E1225DFE3DB00AC1DDD /* UsersListViewController.swift in Sources */,
