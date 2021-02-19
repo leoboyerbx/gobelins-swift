@@ -15,8 +15,11 @@ class WeatherCollectionViewCell: UICollectionViewCell {
     func setup(temperature: String, weather: String, weatherDesc: String) {
         self.backgroundColor = .white
         
-        temperatureLabel.text = "\(temperature)°"
-        weatherLabel.text = weatherDesc
+        if let roundTemperature:Int = Int(temperature) {
+            temperatureLabel.text = "\(roundTemperature)°"
+        }
+        weatherLabel.text = weatherDesc.capitalized
+//        weatherLabel.sizeToFit()
         
         if weather == "Clear" {
             imageView.image = UIImage(named: "meteo_sunny_bg")

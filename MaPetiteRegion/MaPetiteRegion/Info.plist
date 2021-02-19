@@ -69,5 +69,12 @@
 	</array>
 	<key>OpenWeatherApiKey</key>
 	<string>7e3ade8e01c0a1382a8a06b11a7a84ec</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Nunito-Regular.ttf</string>
+		<string>Nunito-Light.tff</string>
+		<string>Nunito-Black.tff</string>
+		<string>Nunito-ExtraBold.tff</string>
+	</array>
 </dict>
 </plist>
