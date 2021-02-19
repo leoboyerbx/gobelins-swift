@@ -6,12 +6,17 @@
 //
 
 import UIKit
+import Kingfisher
 
 class PhotoCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
     
     func setup(model: Photo) {
-        print(model.url ?? "")
+        if let url = URL(string: model.url ?? ""){
+            self.imageView.kf.setImage(with: url)
+        } else {
+            print("show placeholder")
+        }
     }
     
 }

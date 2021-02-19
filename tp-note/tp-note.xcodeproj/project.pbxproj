@@ -17,6 +17,9 @@
 		ED289E1525DFE3FA00AC1DDD /* UsersMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1425DFE3FA00AC1DDD /* UsersMapViewController.swift */; };
 		ED289E1825DFE40A00AC1DDD /* AlbumsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1725DFE40A00AC1DDD /* AlbumsListViewController.swift */; };
 		ED289E1B25DFE41B00AC1DDD /* SingleAlbumViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */; };
+		ED4883EE25DFFDEB00D4AD43 /* Kingfisher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ED4883E925DFFDD300D4AD43 /* Kingfisher.framework */; };
+		ED4883EF25DFFDEB00D4AD43 /* Kingfisher.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = ED4883E925DFFDD300D4AD43 /* Kingfisher.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		ED4883FE25E002B600D4AD43 /* ThumbnailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED4883FD25E002B600D4AD43 /* ThumbnailCollectionViewCell.swift */; };
 		ED5D50FB25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */; };
 		ED5D510525DFFA4B00FECBDC /* PhotoCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5D510425DFFA4B00FECBDC /* PhotoCollectionViewCell.swift */; };
 		ED9171BA25DFE67600DDF1BE /* APIContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED9171B925DFE67600DDF1BE /* APIContext.swift */; };
@@ -34,6 +37,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		ED4883E825DFFDD300D4AD43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4883DC25DFFDD300D4AD43 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D351AD2D09F00CFC3EB;
+			remoteInfo = Kingfisher;
+		};
+		ED4883EA25DFFDD300D4AD43 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = ED4883DC25DFFDD300D4AD43 /* Kingfisher.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = D1ED2D3F1AD2D09F00CFC3EB;
+			remoteInfo = KingfisherTests;
+		};
 		ED9171C625DFE6B900DDF1BE /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = ED9171BC25DFE6B800DDF1BE /* Alamofire.xcodeproj */;
@@ -92,6 +109,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
+				ED4883EF25DFFDEB00D4AD43 /* Kingfisher.framework in Embed Frameworks */,
 				ED9171DE25DFE6C900DDF1BE /* Alamofire.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
@@ -112,6 +130,8 @@
 		ED289E1425DFE3FA00AC1DDD /* UsersMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMapViewController.swift; sourceTree = "<group>"; };
 		ED289E1725DFE40A00AC1DDD /* AlbumsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumsListViewController.swift; sourceTree = "<group>"; };
 		ED289E1A25DFE41B00AC1DDD /* SingleAlbumViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleAlbumViewController.swift; sourceTree = "<group>"; };
+		ED4883DC25DFFDD300D4AD43 /* Kingfisher.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Kingfisher.xcodeproj; path = "Kingfisher-master/Kingfisher.xcodeproj"; sourceTree = "<group>"; };
+		ED4883FD25E002B600D4AD43 /* ThumbnailCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED5D510425DFFA4B00FECBDC /* PhotoCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCollectionViewCell.swift; sourceTree = "<group>"; };
 		ED9171B925DFE67600DDF1BE /* APIContext.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIContext.swift; path = ../../../MaPetiteRegion/MaPetiteRegion/Network/APIContext.swift; sourceTree = "<group>"; };
@@ -132,6 +152,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ED4883EE25DFFDEB00D4AD43 /* Kingfisher.framework in Frameworks */,
 				ED9171DD25DFE6C900DDF1BE /* Alamofire.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +188,7 @@
 				ED289E0525DFE30500AC1DDD /* Assets.xcassets */,
 				ED289E0725DFE30500AC1DDD /* LaunchScreen.storyboard */,
 				ED289E0A25DFE30500AC1DDD /* Info.plist */,
+				ED4883DC25DFFDD300D4AD43 /* Kingfisher.xcodeproj */,
 				ED9171BC25DFE6B800DDF1BE /* Alamofire.xcodeproj */,
 			);
 			path = "tp-note";
@@ -182,6 +204,15 @@
 				ED5D510325DFFA3200FECBDC /* SingleAlbum */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		ED4883DD25DFFDD300D4AD43 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				ED4883E925DFFDD300D4AD43 /* Kingfisher.framework */,
+				ED4883EB25DFFDD300D4AD43 /* KingfisherTests.xctest */,
+			);
+			name = Products;
 			sourceTree = "<group>";
 		};
 		ED5D510325DFFA3200FECBDC /* SingleAlbum */ = {
@@ -284,6 +315,7 @@
 			isa = PBXGroup;
 			children = (
 				ED5D50FA25DFF8AF00FECBDC /* AlbumCollectionViewCell.swift */,
+				ED4883FD25E002B600D4AD43 /* ThumbnailCollectionViewCell.swift */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -339,6 +371,10 @@
 					ProductGroup = ED9171BD25DFE6B800DDF1BE /* Products */;
 					ProjectRef = ED9171BC25DFE6B800DDF1BE /* Alamofire.xcodeproj */;
 				},
+				{
+					ProductGroup = ED4883DD25DFFDD300D4AD43 /* Products */;
+					ProjectRef = ED4883DC25DFFDD300D4AD43 /* Kingfisher.xcodeproj */;
+				},
 			);
 			projectRoot = "";
 			targets = (
@@ -348,6 +384,20 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
+		ED4883E925DFFDD300D4AD43 /* Kingfisher.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Kingfisher.framework;
+			remoteRef = ED4883E825DFFDD300D4AD43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		ED4883EB25DFFDD300D4AD43 /* KingfisherTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = KingfisherTests.xctest;
+			remoteRef = ED4883EA25DFFDD300D4AD43 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 		ED9171C725DFE6B900DDF1BE /* Alamofire.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
@@ -430,6 +480,7 @@
 				ED289DFD25DFE30300AC1DDD /* AppDelegate.swift in Sources */,
 				ED289E1525DFE3FA00AC1DDD /* UsersMapViewController.swift in Sources */,
 				EDC2F2A125DFE59E00923CCE /* UserTableViewCell.swift in Sources */,
+				ED4883FE25E002B600D4AD43 /* ThumbnailCollectionViewCell.swift in Sources */,
 				ED289E1825DFE40A00AC1DDD /* AlbumsListViewController.swift in Sources */,
 				ED9171E925DFEAC400DDF1BE /* UserModelUIExtension.swift in Sources */,
 				EDFCD0E725DFF33D004B3895 /* AlbumModelUI.swift in Sources */,
