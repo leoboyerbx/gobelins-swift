@@ -62,16 +62,16 @@
                                                     </constraints>
                                                 </view>
                                                 <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="9L4-pQ-cmo">
-                                                    <rect key="frame" x="222" y="134" width="172" height="49"/>
+                                                    <rect key="frame" x="222" y="134" width="172" height="57.5"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Vous êtes à" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hWh-FX-IgQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="62.5" height="14"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="61.5" height="16.5"/>
                                                             <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="12"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Annecy" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DPs-l6-qGx">
-                                                            <rect key="frame" x="0.0" y="14" width="100.5" height="35"/>
+                                                            <rect key="frame" x="0.0" y="16.5" width="105.5" height="41"/>
                                                             <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="30"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                             <nil key="highlightedColor"/>
