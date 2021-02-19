@@ -216,19 +216,29 @@
             </objects>
             <point key="canvasLocation" x="4111.594202898551" y="474.77678571428567"/>
         </scene>
-        <!--Users Map View Controller-->
+        <!--Map-->
         <scene sceneID="Rsr-eK-YHI">
             <objects>
                 <viewController id="wbw-IF-3Iq" customClass="UsersMapViewController" customModule="tp_note" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="g1N-Ae-mpB">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="KsF-tH-O4z">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wbw-IF-3Iq" id="Wx6-Ye-0kW"/>
+                                </connections>
+                            </mapView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="XeM-9q-LeF"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="LET-Xh-fsz"/>
+                    <navigationItem key="navigationItem" title="Map" id="LET-Xh-fsz"/>
                     <connections>
-                        <segue destination="7hD-3v-kVh" kind="show" id="ETS-KS-fSh"/>
+                        <outlet property="mapView" destination="KsF-tH-O4z" id="4gi-hI-YCY"/>
+                        <segue destination="7hD-3v-kVh" kind="show" identifier="toAlbumsListFromMap" id="ETS-KS-fSh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GHi-GL-weO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -294,7 +304,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="ivI-Rm-jhr"/>
+        <segue reference="ETS-KS-fSh"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="list.bullet" catalog="system" width="128" height="88"/>
