@@ -19,14 +19,26 @@ class UsersMapViewController: UIViewController, MKMapViewDelegate {
         // Do any additional setup after loading the view.
         mapView.delegate = self
         
-        let user1 = UserLocation(id: 1, title: "toto", info: "Totitoti", coordinate: CLLocationCoordinate2D(latitude: 41.9, longitude: 12.5))
-        
-        mapView.addAnnotation(user1)
+        NetworkManager.instance.getUsers { (users) in
+            for user in users {
+                if let lat = Double(user.address?.geo?.lat ?? ""),
+                   let lng = Double(user.address?.geo?.lng ?? "") {
+                    let coordinate = CLLocationCoordinate2D(latitude: lat, longitude: lng)
+                    self.mapView.addAnnotation(
+                        UserLocation(id: user.id ?? 0,
+                                     title: user.name ?? "",
+                                     info: user.username ?? "",
+                                     coordinate: coordinate)
+                    )
+                }
+            }
+        }
     }
     
     
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView) {
         if let user = view.annotation as? UserLocation {
+            view.isSelected = false
             self.selectedUserId = user.id
             self.performSegue(withIdentifier: "toAlbumsListFromMap", sender: self)
         }
