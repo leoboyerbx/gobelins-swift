@@ -422,16 +422,16 @@
                                                     <rect key="frame" x="20" y="12" width="394" height="98"/>
                                                     <subviews>
                                                         <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="Ohf-mk-WBN">
-                                                            <rect key="frame" x="0.0" y="16.5" width="201" height="65.5"/>
+                                                            <rect key="frame" x="0.0" y="21" width="201" height="56.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Réglages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqo-M7-xxv">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="132" height="41"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Réglages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nqo-M7-xxv">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="125" height="35"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="30"/>
                                                                     <color key="textColor" red="0.094117647060000004" green="0.27450980390000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Villes que je veux voir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdC-m1-roI">
-                                                                    <rect key="frame" x="0.0" y="46" width="135" height="19.5"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Villes que je veux voir" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PdC-m1-roI">
+                                                                    <rect key="frame" x="0.0" y="40" width="134.5" height="16.5"/>
                                                                     <fontDescription key="fontDescription" name="Nunito-Light" family="Nunito" pointSize="14"/>
                                                                     <color key="textColor" red="0.094117647060000004" green="0.27450980390000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -483,7 +483,7 @@
                                                     </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="City name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uc7-aa-KTC">
-                                                    <rect key="frame" x="20" y="12.5" width="305" height="25"/>
+                                                    <rect key="frame" x="20" y="14.5" width="305" height="21"/>
                                                     <fontDescription key="fontDescription" name="Nunito-ExtraBold" family="Nunito" pointSize="18"/>
                                                     <color key="textColor" red="0.094117647060000004" green="0.27450980390000002" blue="0.33333333329999998" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
